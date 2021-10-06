@@ -1,0 +1,85 @@
+{
+  "folders": [
+    {
+      "path": "./"
+    }
+  ],
+  "settings": {
+    // 設定：配色の変更
+    "workbench.colorCustomizations": {
+      // "titleBar.activeBackground": "#660000"
+    },
+    // 設定：ファイルエクスプローラーに非表示
+    "files.exclude": {
+      // "dist": true,
+      ".stylelintrc.json": true,
+      ".prettierrc": true,
+      ".eslintrc.js": true,
+      ".editorconfig": true,
+      ".babelrc": true,
+      ".github": true,
+      "tsconfig.json": true,
+      "package-lock.json": true,
+    },
+    // 設定：TODO Highlight
+    "todohighlight.keywords": [
+      {
+        "text": "DEBUG:",
+        "color": "#FFFFFF",
+        "backgroundColor": "#664400"
+      },
+      {
+        "text": "NOTE:",
+        "color": "#FFFFFF",
+        "backgroundColor": "#002288"
+      },
+      {
+        "text": "HACK:",
+        "color": "#FFFFFF",
+        "backgroundColor": "#006600"
+      },
+      {
+        "text": "TODO:",
+        "color": "#FFF",
+        "backgroundColor": "#662200",
+        "overviewRulerColor": "transparent"
+      },
+      {
+        "text": "FIXME",
+        "color": "#FFF",
+        "backgroundColor": "#220088"
+      }
+    ],
+    "todohighlight.defaultStyle": {
+      "overviewRulerColor": "transparent",
+      "isWholeLine": false
+    },
+    // 設定：Todo+
+    "todo.colors.tag": "#666666",
+    "todo.colors.comment": "#666666",
+    "todo.colors.done": "#448844",
+    "todo.colors.cancelled": "#884444",
+    "todo.colors.project": "#99dddd",
+    "todo.colors.projectStatistics": "#99dddd",
+    // 設定：stylelint
+    "css.validate": false,
+    "scss.validate": false,
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // 設定：eslint
+    "javascript.validate.enable": false,
+    "[js]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    // 自動保存を有効化
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true,
+      "source.fixAll.eslint": true
+    }
+  }
+}
