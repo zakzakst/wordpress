@@ -1,0 +1,19 @@
+{
+  "name": "wordpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakzakst/wordpress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakzakst/wordpress/issues"
+  },
+  "homepage": "https://github.com/zakzakst/wordpress#readme"
+}

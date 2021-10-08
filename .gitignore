@@ -1,1 +1,4 @@
 memo.md
+node_modules
+dist
+src/nunjucks/_module/common/site-data.json
