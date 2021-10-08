@@ -7,15 +7,134 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
+    <!-- ▼▼▼ ナビゲーション ▼▼▼ -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./index.html">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="./news.html" class="navbar-item">ニュース</a>
+                <a href="./works.html" class="navbar-item">実績</a>
+                <a href="./company.html" class="navbar-item">会社概要</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="./contact.html" class="button is-primary">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ▲▲▲ ナビゲーション ▲▲▲ -->
+
+    <!-- ▼▼▼ ヒーローエリア ▼▼▼ -->
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <h1 class="title">お問い合わせ</h1>
         </div>
     </section>
+    <!-- ▲▲▲ ヒーローエリア ▲▲▲ -->
+
+    <!-- ▼▼▼ パンくず ▼▼▼ -->
+    <div class="section">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="./index.html">トップページ</a></li>
+                <li class="is-active"><a href="#" aria-current="page">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ▲▲▲ パンくず ▲▲▲ -->
+
+    <div class="container">
+        <!-- ▼▼▼ お問い合わせフォーム ▼▼▼ -->
+        <section class="section">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">名前</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="山田太郎">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">メールアドレス</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="email" placeholder="sample@mail.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">お問い合わせ内容</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <textarea class="textarea" placeholder="お問い合わせ内容を入力してください"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label"></div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary">送信</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ▲▲▲ お問い合わせフォーム ▲▲▲ -->
+    </div>
+
+    <!-- ▼▼▼ フッター ▼▼▼ -->
+    <footer class="footer">
+        <div class="container content">
+            <p class="buttons is-centered">
+                <a href="#" class="button is-medium">
+                    <span class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </span>
+                </a>
+                <a href="#" class="button is-medium">
+                    <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                </a>
+                <a href="#" class="button is-medium">
+                    <span class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                </a>
+            </p>
+            <p class="has-text-centered">Copyright ©XXXXX. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- ▲▲▲ フッター ▲▲▲ -->
+
+    <!-- ▼▼▼ スクリプト ▼▼▼ -->
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- ▲▲▲ スクリプト ▲▲▲ -->
 </body>
 </html>
