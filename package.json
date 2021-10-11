@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
     "start": "gulp",
-    "imagemin": "gulp imagemin"
+    "build": "gulp build",
+    "imageMin": "gulp imageMin",
+    "nunjucksBuild": "gulp nunjucksBuild"
   },
   "repository": {
     "type": "git",

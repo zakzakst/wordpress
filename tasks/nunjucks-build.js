@@ -1,29 +1,30 @@
 const gulp = require('gulp');
-const fs = require('fs');
 const nunjucksRender = require('gulp-nunjucks-render');
 const prettify = require('gulp-prettify');
 const htmlmin = require('gulp-htmlmin');
+
+// 定数の読み込み
+const CONSTANTS = require('../src/nunjucks/constants.js');
 
 // Nunjucksのビルド
 function nunjucksBuild() {
   const nunjucksPath = {
     root: 'src/nunjucks/',
-    siteData: 'src/nunjucks/_module/common/site-data.json',
     src: [
-      'src/nunjucks/html/**/*.njk',
+      // 'src/nunjucks/html/**/*.njk',
+      'src/nunjucks/html/index.njk',
       '!src/nunjucks/html/**/_*.njk'
     ],
     dist: 'dist/',
   };
-  const data = JSON.parse(fs.readFileSync(nunjucksPath.siteData, 'utf8'));
   return gulp.src(nunjucksPath.src)
     .pipe(nunjucksRender({
       path: [nunjucksPath.root],
-      data: data
+      data: CONSTANTS,
     }))
     .pipe(htmlmin({
       // collapseWhitespace : true,
-      removeComments : true
+      removeComments : true,
     }))
     .pipe(prettify({
       indent_size: 2,

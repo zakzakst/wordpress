@@ -1,0 +1,59 @@
+{% extends "_layout/single.njk" %}
+{% set pageData = {
+  title: "サイト02 - トップページ",
+  keywords: "キーワード01,キーワード02,キーワード03,キーワード04,キーワード05",
+  description: "ページの概要が入ります。",
+  path: "",
+  nav: "top",
+  category: "top",
+  barbaName: "top"
+} -%}
+
+{% block head_files -%}
+{{ super() }}
+<link rel="stylesheet" href="/{{ siteData.rootPath }}css/top.css">
+{%- endblock %}
+
+{% block main_content %}
+<div class="content">
+  <section class="section">
+    <h2>トップページの見出し</h2>
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+  </section>
+  <section class="section">
+    <div class="columns about-list">
+      <div class="column is-one-third content tablet-column">
+        <a href="/{{ siteData.rootPath}}about/">
+          <p class="image is-2by1">
+            <img src="https://bulma.io/images/placeholders/640x320.png" alt="">
+            <p class="title is-4">○○について</p>
+          </p>
+        </a>
+      </div>
+      <div class="column is-one-third content tablet-column">
+        <a href="/{{ siteData.rootPath}}news/">
+          <p class="image is-2by1">
+            <img src="https://bulma.io/images/placeholders/640x320.png" alt="">
+            <p class="title is-4">ニュース</p>
+          </p>
+        </a>
+      </div>
+      <div class="column is-one-third content tablet-column">
+        <a href="/{{ siteData.rootPath}}contact/">
+          <p class="image is-2by1">
+            <img src="https://bulma.io/images/placeholders/640x320.png" alt="">
+            <p class="title is-4">お問い合わせ</p>
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block foot_files -%}
+{{ super() }}
+<script src="/{{ siteData.rootPath }}js/top.js"></script>
+{%- endblock %}
