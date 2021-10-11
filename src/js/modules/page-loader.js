@@ -2,7 +2,9 @@ import $ from 'jquery';
 
 export function pageLoader() {
   const el = $('#js-page-loader');
-  if(!el) {return;}
+  if (!el) {
+    return;
+  }
   const speed = 400;
   const delay = 400;
 

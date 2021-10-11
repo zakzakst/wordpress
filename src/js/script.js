@@ -3,7 +3,7 @@ import { goTop } from './modules/go-top';
 import { headerScripts } from './modules/header';
 import { pageLoader } from './modules/page-loader';
 
-$(function() {
+$(function () {
   goTop();
   headerScripts();
   pageLoader();

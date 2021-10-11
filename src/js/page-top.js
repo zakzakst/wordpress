@@ -1,5 +1,5 @@
 import $ from 'jquery';
 
-$(function() {
+$(function () {
   // トップページ用のスクリプトを記載
 });
