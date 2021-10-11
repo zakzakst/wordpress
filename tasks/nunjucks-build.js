@@ -11,8 +11,8 @@ function nunjucksBuild() {
   const nunjucksPath = {
     root: 'src/nunjucks/',
     src: [
-      'src/nunjucks/html/**/*.njk',
-      '!src/nunjucks/html/**/_*.njk'
+      'src/nunjucks/pages/**/*.njk',
+      '!src/nunjucks/pages/**/_*.njk'
     ],
     dist: 'dist/',
   };
