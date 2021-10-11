@@ -1,3 +1,15 @@
-test
+{% set PAGE_DATA = {
+  TITLE: "ページ名",
+  DESCRIPTION: "ページの概要",
+  PATH: "",
+  nav: "top",
+  category: "top",
+  barbaName: "top"
+} -%}
 
-<title>{{ CONSTANTS.test }}</title>
+<head>
+  {% include '../nunjucks/_module/head/_head.njk' %}
+  <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+  <link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/top.css">
+  <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
+</head>
