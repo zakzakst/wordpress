@@ -1,0 +1,130 @@
+{% extends '_layout/default.njk' %}
+{% set PAGE_DATA = {
+    TITLE: 'ニュース一覧',
+    DESCRIPTION: 'ページの概要',
+    PATH: '',
+    NAV: 'news',
+    ROOT: '../',
+    BREADCRUMBS: [
+        {
+            PATH: 'index.html',
+            LABEL: 'トップページ'
+        },
+        {
+            PATH: 'news/index.html',
+            LABEL: 'ニュース一覧'
+        }
+    ]
+} -%}
+
+{# {% block PAGE_HEAD_FILES -%}
+    <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+    <link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/top.css">
+    <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
+{%- endblock %} #}
+
+{% block PAGE_CONTENT -%}
+    <!-- ▼▼▼ ヒーローエリア ▼▼▼ -->
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <h1 class="title">ニュース一覧</h1>
+        </div>
+    </section>
+    <!-- ▲▲▲ ヒーローエリア ▲▲▲ -->
+
+    {% include '_module/breadcrumb.njk' %}
+
+    <div class="container">
+        <!-- ▼▼▼ ニュース ▼▼▼ -->
+        <section class="section">
+            <h1 class="title">ニュース</h1>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ▲▲▲ ニュース ▲▲▲ -->
+
+        <!-- ▼▼▼ ページネーション ▼▼▼ -->
+        <div class="section">
+            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                <a class="pagination-previous">Previous</a>
+                <a class="pagination-next">Next page</a>
+                <ul class="pagination-list">
+                    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- ▲▲▲ ページネーション ▲▲▲ -->
+    </div>
+{%- endblock %}
+
+{# {% block PAGE_FOOT_FILES -%}
+    <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+    <link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/top.css">
+    <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
+{%- endblock %} #}

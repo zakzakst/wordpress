@@ -1,0 +1,18 @@
+<!-- ▼▼▼ パンくず ▼▼▼ -->
+<div class="section">
+  <nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+      {%- for BREADCRUMB in PAGE_DATA.BREADCRUMBS -%}
+        {# 最後のパンくずのみクラス「is-active」を付与 #}
+        {%- if loop.index == PAGE_DATA.BREADCRUMBS.length -%}
+          <li class="is-active">
+        {%- else -%}
+          <li>
+        {%- endif -%}
+          <a href="{{ PAGE_DATA.ROOT }}{{ BREADCRUMB.PATH }}">{{ BREADCRUMB.LABEL }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+</div>
+<!-- ▲▲▲ パンくず ▲▲▲ -->

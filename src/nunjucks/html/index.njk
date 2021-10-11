@@ -1,15 +1,179 @@
+{% extends '_layout/default.njk' %}
 {% set PAGE_DATA = {
-  TITLE: "ページ名",
-  DESCRIPTION: "ページの概要",
-  PATH: "",
-  nav: "top",
-  category: "top",
-  barbaName: "top"
+    TITLE: 'トップページ',
+    DESCRIPTION: 'ページの概要',
+    PATH: '',
+    NAV: 'top',
+    ROOT: './'
 } -%}
 
-<head>
-  {% include '../nunjucks/_module/head/_head.njk' %}
-  <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
-  <link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/top.css">
-  <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
-</head>
+{# {% block PAGE_HEAD_FILES -%}
+    <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+    <link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/top.css">
+    <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
+{%- endblock %} #}
+
+{% block PAGE_CONTENT -%}
+    <!-- ▼▼▼ ヒーローエリア ▼▼▼ -->
+    <section class="hero is-primary is-medium">
+        <div class="hero-body">
+            <h1 class="title">タイトル</h1>
+            <p class="subtitle">サブタイトル</p>
+        </div>
+    </section>
+    <!-- ▲▲▲ ヒーローエリア ▲▲▲ -->
+
+    <div class="container">
+        <!-- ▼▼▼ ニュース ▼▼▼ -->
+        <section class="section">
+            <h1 class="title">ニュース</h1>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <p><a href="./news.html" class="button">もっと見る</a></p>
+        </section>
+        <!-- ▲▲▲ ニュース ▲▲▲ -->
+
+        <!-- ▼▼▼ 実績 ▼▼▼ -->
+        <section class="section">
+            <h1 class="title">実績</h1>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <p><a href="./works.html" class="button">もっと見る</a></p>
+        </section>
+        <!-- ▲▲▲ 実績 ▲▲▲ -->
+
+        <!-- ▼▼▼ 会社概要 ▼▼▼ -->
+        <section class="section content">
+            <h1 class="title">会社概要</h1>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <p><a href="./works.html" class="button">もっと見る</a></p>
+        </section>
+        <!-- ▲▲▲ 会社概要 ▲▲▲ -->
+    </div>
+{%- endblock %}
+
+{# {% block PAGE_FOOT_FILES -%}
+    <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+    <link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/top.css">
+    <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
+{%- endblock %} #}
