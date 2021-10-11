@@ -1,20 +1,10 @@
-{% extends '_layout/default.njk' %}
+{% extends 'layouts/default.njk' %}
 {% set PAGE_DATA = {
-    TITLE: 'ニュース一覧',
+    TITLE: 'トップページ',
     DESCRIPTION: 'ページの概要',
     PATH: '',
-    NAV: 'news',
-    ROOT: '../',
-    BREADCRUMBS: [
-        {
-            PATH: 'index.html',
-            LABEL: 'トップページ'
-        },
-        {
-            PATH: 'news/index.html',
-            LABEL: 'ニュース一覧'
-        }
-    ]
+    NAV: 'top',
+    ROOT: './'
 } -%}
 
 {# {% block PAGE_HEAD_FILES -%}
@@ -25,14 +15,13 @@
 
 {% block PAGE_CONTENT -%}
     <!-- ▼▼▼ ヒーローエリア ▼▼▼ -->
-    <section class="hero is-primary">
+    <section class="hero is-primary is-medium">
         <div class="hero-body">
-            <h1 class="title">ニュース一覧</h1>
+            <h1 class="title">タイトル</h1>
+            <p class="subtitle">サブタイトル</p>
         </div>
     </section>
     <!-- ▲▲▲ ヒーローエリア ▲▲▲ -->
-
-    {% include '_module/breadcrumb.njk' %}
 
     <div class="container">
         <!-- ▼▼▼ ニュース ▼▼▼ -->
@@ -100,26 +89,86 @@
                     </div>
                 </div>
             </div>
+            <p><a href="./news.html" class="button">もっと見る</a></p>
         </section>
         <!-- ▲▲▲ ニュース ▲▲▲ -->
 
-        <!-- ▼▼▼ ページネーション ▼▼▼ -->
-        <div class="section">
-            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                <a class="pagination-previous">Previous</a>
-                <a class="pagination-next">Next page</a>
-                <ul class="pagination-list">
-                    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                    <li><span class="pagination-ellipsis">&hellip;</span></li>
-                    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
-                    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
-                    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
-                    <li><span class="pagination-ellipsis">&hellip;</span></li>
-                    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- ▲▲▲ ページネーション ▲▲▲ -->
+        <!-- ▼▼▼ 実績 ▼▼▼ -->
+        <section class="section">
+            <h1 class="title">実績</h1>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="実績画像">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <p><a href="./works.html" class="button">もっと見る</a></p>
+        </section>
+        <!-- ▲▲▲ 実績 ▲▲▲ -->
+
+        <!-- ▼▼▼ 会社概要 ▼▼▼ -->
+        <section class="section content">
+            <h1 class="title">会社概要</h1>
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <p><a href="./works.html" class="button">もっと見る</a></p>
+        </section>
+        <!-- ▲▲▲ 会社概要 ▲▲▲ -->
     </div>
 {%- endblock %}
 

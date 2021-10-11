@@ -1,4 +1,4 @@
-{% extends '_layout/default.njk' %}
+{% extends 'layouts/default.njk' %}
 {% set PAGE_DATA = {
     TITLE: '実績一覧',
     DESCRIPTION: 'ページの概要',
@@ -32,7 +32,7 @@
     </section>
     <!-- ▲▲▲ ヒーローエリア ▲▲▲ -->
 
-    {% include '_module/breadcrumb.njk' %}
+    {% include 'components/breadcrumb.njk' %}
 
     <div class="container">
         <!-- ▼▼▼ 実績 ▼▼▼ -->

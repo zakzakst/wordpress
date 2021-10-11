@@ -1,9 +1,9 @@
-{% extends '_layout/default.njk' %}
+{% extends 'layouts/default.njk' %}
 {% set PAGE_DATA = {
-    TITLE: 'ニュース詳細',
+    TITLE: '実績詳細',
     DESCRIPTION: 'ページの概要',
     PATH: '',
-    NAV: 'news',
+    NAV: 'works',
     ROOT: '../',
     BREADCRUMBS: [
         {
@@ -11,12 +11,12 @@
             LABEL: 'トップページ'
         },
         {
-            PATH: 'news/index.html',
-            LABEL: 'ニュース一覧'
+            PATH: 'works/index.html',
+            LABEL: '実績一覧'
         },
         {
-            PATH: 'news/detail.html',
-            LABEL: 'ニュース詳細'
+            PATH: 'works/detail.html',
+            LABEL: '実績詳細'
         }
     ]
 } -%}
@@ -31,12 +31,12 @@
     <!-- ▼▼▼ ヒーローエリア ▼▼▼ -->
     <section class="hero is-primary">
         <div class="hero-body">
-            <h1 class="title">ニュース詳細 タイトル</h1>
+            <h1 class="title">実績詳細 タイトル</h1>
         </div>
     </section>
     <!-- ▲▲▲ ヒーローエリア ▲▲▲ -->
 
-    {% include '_module/breadcrumb.njk' %}
+    {% include 'components/breadcrumb.njk' %}
 
     <div class="container">
         <div class="columns">
@@ -53,7 +53,7 @@
             <div class="column is-one-quarter-desktop">
                 <aside class="menu">
                     <section class="section">
-                        <p class="menu-label">最近のニュース</p>
+                        <p class="menu-label">最近の実績</p>
                         <ul class="menu-list">
                             <li><a href="#">タイトル01</a></li>
                             <li><a href="#">タイトル02</a></li>
