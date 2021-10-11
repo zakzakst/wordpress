@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  {% include '../_module/head/_head.njk' %}
+  {# ▼▼▼ ブロック：読み込みファイル（ページ専用） ▼▼▼ #}
+  {% block PAGE_HEAD_FILES -%}
+  {%- endblock %}
+  {# ▲▲▲ ブロック：読み込みファイル（ページ専用） ▲▲▲ #}
+</head>
+<body>
+  {% include '../_module/header.njk' %}
+  {# ▼▼▼ ブロック：ページ内容 ▼▼▼ #}
+  {% block PAGE_CONTENT -%}
+  {%- endblock %}
+  {# ▲▲▲ ブロック：ページ内容 ▲▲▲ #}
+  {% include '../_module/foot/_foot.njk' %}
+  {# ▼▼▼ ブロック：読み込みファイル（ページ専用） ▼▼▼ #}
+  {% block PAGE_FOOT_FILES -%}
+  {%- endblock %}
+  {# ▲▲▲ ブロック：読み込みファイル（ページ専用） ▲▲▲ #}
+</body>
+</html>
