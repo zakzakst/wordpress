@@ -7,7 +7,8 @@
     "start": "gulp",
     "build": "gulp build",
     "imageMin": "gulp imageMin",
-    "nunjucksBuild": "gulp nunjucksBuild"
+    "nunjucksBuild": "gulp nunjucksBuild",
+    "sassBuild": "gulp sassBuild"
   },
   "repository": {
     "type": "git",

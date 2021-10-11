@@ -19,3 +19,4 @@ gulp.task('default', gulp.series(browsersync.server, 'watch-files'));
 gulp.task('build', gulp.series(nunjucksBuild, sassBuild, webpack));
 gulp.task('imageMin', gulp.series(imagemin));
 gulp.task('nunjucksBuild', gulp.series(nunjucksBuild));
+gulp.task('sassBuild', gulp.series(sassBuild));
