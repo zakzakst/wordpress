@@ -3,13 +3,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   entry: {
     script: './src/js/script.js',
-    top: './src/js/top.js',
+    top: './src/js/page-top.js',
   },
   output: {
     path: `${__dirname}/dist/js`,
     filename: '[name].js'
   },
-  mode: 'development', // production development
+  mode: 'production', // production development
   module: {
     rules: [
       {
