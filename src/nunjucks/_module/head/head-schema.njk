@@ -1,0 +1,25 @@
+<!-- ▼▼▼ 構造化データ ▼▼▼ -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "{{ CONSTANTS.DOMAIN }}",
+          "name": "{{ CONSTANTS.SITE_NAME }}"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ CONSTANTS.DOMAIN }}{{ CONSTANTS.SITE_ROOT }}{{ PAGE_DATA.PATH }}",
+          "name": "{{ PAGE_DATA.TITLE }}"
+        }
+      }
+    ]
+  }
+</script>
+<!-- ▲▲▲ 構造化データ ▲▲▲ -->

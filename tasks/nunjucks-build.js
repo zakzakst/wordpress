@@ -24,10 +24,10 @@ function nunjucksBuild() {
     }))
     .pipe(htmlmin({
       // collapseWhitespace : true,
-      removeComments : true,
+      // removeComments : true,
     }))
     .pipe(prettify({
-      indent_size: 2,
+      indent_size: 4,
     }))
     .pipe(gulp.dest(nunjucksPath.dist));
 }
