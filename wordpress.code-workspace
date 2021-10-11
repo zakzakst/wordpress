@@ -12,14 +12,14 @@
     // 設定：ファイルエクスプローラーに非表示
     "files.exclude": {
       // "dist": true,
-      ".stylelintrc.json": true,
-      ".prettierrc": true,
-      ".eslintrc.js": true,
-      ".editorconfig": true,
-      ".babelrc": true,
-      ".github": true,
-      "tsconfig.json": true,
-      "package-lock.json": true,
+      // ".stylelintrc.json": true,
+      // ".prettierrc": true,
+      // ".eslintrc.js": true,
+      // ".editorconfig": true,
+      // ".babelrc": true,
+      // ".github": true,
+      // "tsconfig.json": true,
+      // "package-lock.json": true,
     },
     // 設定：TODO Highlight
     "todohighlight.keywords": [

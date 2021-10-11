@@ -2,7 +2,9 @@ import $ from 'jquery';
 
 export function headerScripts() {
   const el = $('#js-header__navbar');
-  if(!el) {return;}
+  if (!el) {
+    return;
+  }
   const menu = $('#js-header__navbar-menu');
   const button = $('#js-header__navbar-button');
   const speed = 400;
@@ -14,7 +16,7 @@ export function headerScripts() {
   function addEventToggleMenu() {
     button.on('click', (e) => {
       e.preventDefault();
-      if(el.hasClass('is-open')) {
+      if (el.hasClass('is-open')) {
         menuClose();
       } else {
         menuOpen();
@@ -51,10 +53,10 @@ export function headerScripts() {
     const options = {
       root: null,
       rootMargin: '2% 0px -102%',
-      threshold: 0
-    }
+      threshold: 0,
+    };
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           el.addClass('is-show-bg');
         } else {
