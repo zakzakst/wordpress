@@ -38,67 +38,13 @@
         <!-- ▼▼▼ ニュース ▼▼▼ -->
         <section class="section">
             <h1 class="title">ニュース</h1>
-            <div class="columns">
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
+            {%- import 'components/news-card.njk' as NEWS_CARD -%}
+            <div class="columns is-multiline">
+                {%- for NEWS_ITEM in NEWS_ITEMS -%}
+                    <div class="column is-one-quarter">
+                        {{ NEWS_CARD.default(NEWS_ITEM) }}
                     </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./news-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
-                    </div>
-                </div>
+                {%- endfor -%}
             </div>
         </section>
         <!-- ▲▲▲ ニュース ▲▲▲ -->
