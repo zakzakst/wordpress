@@ -1,39 +1,51 @@
+/**
+ * npm modules
+ */
 const gulp = require('gulp');
+const plumber = require('gulp-plumber');
 const nunjucksRender = require('gulp-nunjucks-render');
-// TODO: 必要か判断
-const prettify = require('gulp-prettify');
+const htmlhint = require('gulp-htmlhint');
+const htmlbeautify = require('gulp-html-beautify');
+const minifyInline = require('gulp-minify-inline');
+const minifyInlineJSON = require('gulp-minify-inline-json');
+const gulpIf = require('gulp-if');
 const htmlmin = require('gulp-htmlmin');
+const rename = require('gulp-rename');
 
-// 定数の読み込み
+/**
+ * values
+ */
+const files = ['src/nunjucks/pages/**/*.njk', '!src/nunjucks/pages/**/_*.njk'];
+const dist = './dist';
+const root = 'src/nunjucks/';
+const environment = process.env.NODE_ENV || 'development';
+const htmlminOptions = {
+  collapseWhitespace: true,
+  removeComments: true,
+};
 const CONSTANTS = require('../src/nunjucks/constants.js');
 
-// Nunjucksのビルド
-function nunjucksBuild() {
-  const nunjucksPath = {
-    root: 'src/nunjucks/',
-    src: ['src/nunjucks/pages/**/*.njk', '!src/nunjucks/pages/**/_*.njk'],
-    dist: 'dist/',
-  };
+/**
+ * functions
+ */
+function NUNJUCKS_BUILD() {
   return gulp
-    .src(nunjucksPath.src)
+    .src(files)
+    .pipe(plumber())
     .pipe(
       nunjucksRender({
-        path: [nunjucksPath.root],
+        path: [root],
         data: CONSTANTS,
       })
     )
-    .pipe(
-      htmlmin({
-        // collapseWhitespace : true,
-        // removeComments : true,
-      })
-    )
-    .pipe(
-      prettify({
-        indent_size: 2,
-      })
-    )
-    .pipe(gulp.dest(nunjucksPath.dist));
+    .pipe(htmlhint('.htmlhintrc'))
+    .pipe(htmlhint.reporter())
+    .pipe(htmlbeautify())
+    .pipe(minifyInline())
+    .pipe(minifyInlineJSON())
+    .pipe(gulpIf(environment === 'production', htmlmin(htmlminOptions)))
+    .pipe(rename({ extname: '.html' }))
+    .pipe(gulp.dest(dist));
 }
 
-exports.nunjucksBuild = nunjucksBuild;
+module.exports = NUNJUCKS_BUILD;

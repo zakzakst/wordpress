@@ -1,13 +1,21 @@
+/**
+ * npm modules
+ */
 const gulp = require('gulp');
 const webpackStream = require('webpack-stream');
 const webpack = require('webpack');
 
-const webpackConfig = require('../webpack.config');
+/**
+ * values
+ */
+const dist = './dist/js';
+const config = require('../webpack.config');
 
-// webpackの実行
-function webpackFunc() {
-  return webpackStream(webpackConfig, webpack)
-    .pipe(gulp.dest('dist/js'));
+/**
+ * functions
+ */
+function WEBPACK() {
+  return webpackStream(config, webpack).pipe(gulp.dest(dist));
 }
 
-exports.webpack = webpackFunc;
+module.exports = WEBPACK;
