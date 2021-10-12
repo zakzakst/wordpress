@@ -38,67 +38,13 @@
         <!-- ▼▼▼ 実績 ▼▼▼ -->
         <section class="section">
             <h1 class="title">実績</h1>
-            <div class="columns">
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
+            {%- import 'components/work-card.njk' as WORK_CARD -%}
+            <div class="columns is-multiline">
+                {%- for WORK_ITEM in WORK_ITEMS -%}
+                    <div class="column is-one-quarter">
+                        {{ WORK_CARD.default(WORK_ITEM) }}
                     </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="ニュース画像">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="content">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                        </div>
-                        <footer class="card-footer">
-                            <a href="./works-detail.html" class="card-footer-item">詳細を見る</a>
-                        </footer>
-                    </div>
-                </div>
+                {%- endfor -%}
             </div>
         </section>
         <!-- ▲▲▲ 実績 ▲▲▲ -->
